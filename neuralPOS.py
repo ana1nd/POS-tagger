@@ -14,8 +14,8 @@ class Neural :
     
     input_dim = 42
     output_dim = 14
-    hidden_dim = 60  #number of hidden layers is 2
-    eta = 0.8
+    hidden_dim = 40  #number of hidden layers is 2
+    eta = 0.5
     examples = 543149
     no_passes = 5000
     filemode = 25
@@ -448,7 +448,7 @@ def makeCSVfile(x_test,y_actual,W1,W2,W3) :
     total = len(x_test)
     correct = np.sum(result==y_actual)
     acc = correct/total
-    print "test Acc = ",correct,"   ",acc
+    print "test Acc = ",correct,"  ",acc
     '''output_class = pd.DataFrame(output_class)    
     result = pd.DataFrame(result)
     result.to_csv("output.csv",header=True)
